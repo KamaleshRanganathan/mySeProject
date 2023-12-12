@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+      <meta name="description" content="">
+      <meta name="keywords" content="">
+        <title>Login-page</title>
+        <style>
+
+          :root {
+            --primary-color: #dae6ef;
+            --secondary-color: #000000;
+            --third-color : #b8d9f4;
+            --fouth-color : #65aeea;
+        }
+            body {
+            background-color: var(--primary-color);
+            margin:0%;
+        }
+        .dark-theme {
+            --primary-color: #371B58;
+            --secondary-color: #f6fbff;
+            --third-color : #4c3575;
+            --fouth-color : #5b4b8a;
+
+        }
+            .d1{
+                padding: 30px 120px;
+            }
+            .d2{
+                background-color: var(--secondary-color);
+                width: 90%;
+                height: 720px;
+                position: relative;
+                margin: auto;
+            }
+
+            .d3{
+                position: absolute;
+                background-color: var(--third-color);
+                top: 0px;
+                left: 0px;
+                width: 49%;
+                height: 720px;
+                
+            }
+            .d4{
+                position: absolute;
+                background-color: var(--third-color);
+                top: 0px;
+                right: 0px;
+                width: 49%;
+                height: 720px;
+            }
+
+            .d5{
+                position: relative;
+                height: 720px;
+                width: 100%;
+                padding: 30px;
+                padding-bottom: 0%;
+            }
+
+            .d6{
+                position: relative;
+                height: 720px;
+                width: 100%;
+            }
+
+            .d7{
+                background-color: var(--fouth-color);
+
+                width: 85%;
+                margin: auto;
+                height: 300px;
+                margin-top: 50px;
+                margin-bottom: 100px;
+            
+              }
+            .d8{
+                background-color: var(--fouth-color);
+                width: 85%;
+                margin: auto;
+                height: 200px;
+            }
+
+            .d9{
+              position: relative;
+              width: 60%;
+              margin: auto;
+              margin-top: 50px;
+              height: 100px;
+              background-color: var(--fouth-color);
+              margin-bottom: 50px;
+              padding: 1px;
+            }
+
+            .d10{
+              height: 350px;
+              background-color: var(--fouth-color);
+              width: 80%;
+              margin: auto;
+              padding: 20px;
+            }
+
+            .dash{width: 90%;height: 6px;padding: 20px;border-radius: 10px;
+              color: var(--secondary-color);
+              background-color: var(--primary-color);
+              
+            }
+
+            .head1{
+              margin: 25px;
+              color: var(--secondary-color);
+            }
+
+            .b1{
+              display: block; 
+              margin: auto;
+              font-size: large;
+              border-radius: 10px;
+              cursor: pointer;
+              color: var(--secondary-color);
+              background-color: var(--primary-color);
+            }
+            .b1:active { 
+            transform: scale(0.98); 
+            /* Scaling button to 0.98 to its original size */ 
+            box-shadow: 3px 2px 22px 1px rgba(80, 75, 75, 0.24); 
+            /* Lowering the shadow */ 
+        } 
+            a{color: var(--primary-color);text-decoration: none;}
+            li{
+              display: inline-block;
+            }
+
+            .logo {
+              position: absolute;
+            width: 30px;
+            cursor: pointer;
+            top: 0%;
+            right: 0%;
+        }
+
+        </style>
+    </head>
+    <body>
+        <div class="d1">
+          
+            <div class="d2">
+                <div class="d3">
+                    <!-- Inside left--> 
+                        <div class="d7">
+                          <img src="teamwork-3213924_640.jpg" style="background-repeat: no-repeat;width: 100%;height: 100%;background-size: cover;opacity: 0.9;">
+                            
+                        </div>
+                        <div class="d8">
+                         <h3 style="color: var(--secondary-color);font-size: xx-large;text-align: center;padding-top: 40px;"> Ready To Dive In ? Type Your  Credintials And Dive Into Office Bliss ! 
+                         </h3>
+                        </div>
+                    
+                </div>
+                <div class="d4">
+                    <!-- Inside right-->  
+                        <div class="d9">
+                          <p style="font-size: xx-large;text-align: center;color: var(--secondary-color);">
+                            LOGIN
+                          
+                          
+                        </p>
+                        <img src="moon.png" class="logo" id="icon">
+                        </div>
+                        <form action="login.php" method="post">
+                          <div class="d10">
+                            <label for="username" class="head1">USERNAME :</label>
+                            <br><br>
+                            <div style="text-align: center;">
+                              <input id="username" class="dash" placeholder="Enter your username" name="username" required>
+                            </div>
+                            <br><br>
+                            <label for="password" class="head1">PASSWORD :</label>
+                            <br><br>
+                            <div style="text-align: center;">
+                              <input id="password" class="dash" placeholder="Enter your password" name="password" required>
+                            </div>
+                            <br><br>
+                            <ul style="text-align: left;list-style: none;">
+                              <li style="margin-right: 28%">
+                                <button type="button" class="b1">
+                                  Forget password ?</button>
+                              </li>
+                              <li class="line">
+                                <input type="submit" value="Submit" class="b1">
+                              </li>
+                            </ul>
+                          </div>
+                        </form>
+                        
+                        <br>
+                        <br>
+                        <div style="text-align: center;font-size: larger;margin: auto;color: var(--secondary-color);">New here ?
+                          <button type="button" class="b1" onclick="signin()">
+                            Sign Up</button>
+                        </div>
+                </div>
+            </div>
+
+        </div>
+
+        <script>
+          var icon = document.getElementById("icon");
+  
+          icon.onclick = function () {
+              document.body.classList.toggle("dark-theme");
+              if (document.body.classList.contains("dark-theme")) {
+                  icon.src = "sun.png";
+              } else {
+                  icon.src = "moon.png";
+              }
+          }
+
+          function signin(){
+            window.location.href="sign-in-page.html"
+          }
+      </script>
+    </body>
+</html>
